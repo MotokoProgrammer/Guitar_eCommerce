@@ -1,10 +1,6 @@
 .header {
 	grid-column: 1 / -1;
-	background-image: linear-gradient(
-			rgba($color-secondary-light, 0.23),
-			rgba($color-secondary-light, 0.23)
-		),
-		url(../img/homepage.jpg);
+	background-image: url(../img/homepage.jpg);
 	background-size: cover;
 	background-position: center;
 	padding: 8rem;
@@ -12,13 +8,13 @@
 	font-family: $font-type-1;
 
 	display: grid;
-	grid-template-rows: 1fr min-content minmax(min-content, 1fr) min-content min-content;
-	grid-template-columns: minmax(min-content, max-content);
+	grid-template-rows: repeat(4, min-content) minmax(10rem, max-content);
 	grid-row-gap: 1.5rem;
 	justify-content: center;
 
 	&__logo {
 		height: 3rem;
+		margin-bottom: 20rem;
 		justify-self: center;
 	}
 
@@ -27,9 +23,11 @@
 		grid-template-columns: 1fr max-content 1fr;
 		grid-column-gap: 1.5rem;
 		align-items: center;
+		margin-top: 20rem;
 
-		font-size: 1.6rem;
-		color: $color-grey-light-2;
+		font-size: 2.6rem;
+		font-weight: 700;
+		color: $color-grey-dark-3;
 
 		&::before,
 		&::after {
