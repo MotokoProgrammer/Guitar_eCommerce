@@ -28,7 +28,6 @@ const {
 //=================================
 //              USERS
 //=================================
-
 app.get('/api/users/auth', auth, (req, res) => {
     res.status(200).json({
         isAdmin: req.user.role === 0 ? false : true,
@@ -79,6 +78,24 @@ app.post('/api/users/login', (req, res) => {
             })
         })
     })
+})
+
+app.get('/api/user/logout', auth, (req, res) => {
+    User.findOneAndUpdate({
+            _id: req.user._id
+        }, {
+            token: ''
+        },
+        (err, doc) => {
+            if (err) return res.json({
+                success: false,
+                err
+            });
+            return res.status(200).send({
+                success: true
+            })
+        }
+    )
 })
 
 
