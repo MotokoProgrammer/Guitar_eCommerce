@@ -1,16 +1,5 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true
-    },
     "extends": ["airbnb", "prettier", "prettier/react"],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
     "plugins": ["prettier"],
     "rules": {
         "react/jsx-filename-extension": [
@@ -23,9 +12,10 @@ module.exports = {
         "no-underscore-dangle": 0,
         "import/imports-first": ["error", "absolute-first"],
         "import/newline-after-import": "error",
+
         "indent": [
             "error",
-            "tab"
+            4
         ],
         "linebreak-style": 0,
         "quotes": [
@@ -46,4 +36,4 @@ module.exports = {
         "Blob": true,
         "navigator": true
     }
-};
+}
