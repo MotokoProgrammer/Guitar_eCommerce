@@ -23,7 +23,8 @@
     "scripts": {
         "test": "jest",
         "start": "node server/server.js",
-        "server": "nodemon server/server.js"
+        "server": "nodemon server/server.js",
+        "lint": "eslint server/**/*.js server/*.js --fix"
     },
     "repository": {
         "type": "git",
