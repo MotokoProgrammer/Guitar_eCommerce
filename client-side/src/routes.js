@@ -5,17 +5,15 @@ import Layout from './hoc/layout';
 import Home from './components/Home';
 import RegisterLogin from './components/Register_login';
 
-const Routes = () => {
-  return(
+const Routes = () => (
     <Layout>
-      <Switch>
-        <Route path="/register_login" exact component={RegisterLogin}/>
-        <Route path="/" exact component={Home}/>
-      </Switch>
+        <Switch>
+            <Route path="/register_login" exact component={RegisterLogin}/>
+            <Route path="/" exact component={Home}/>
+        </Switch>
     </Layout>
 
-  )
-}
+);
 
 
 export default Routes;
