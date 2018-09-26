@@ -1,17 +1,21 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Layout from './hoc/Layout';
-import Home from './components/Home/Home';
-import RegisterLogin from './components/Register_login/Register_login';
+import Layout from './hoc/layout';
+import Home from './components/Home';
+import RegisterLogin from './components/Register_login';
 
-const Routes = () => (
+const Routes = () => {
+  return(
     <Layout>
-        <Switch>
-            <Route path='/register_login' exact component={RegisterLogin} />
-            <Route path='/' exact component={Home} />
-        </Switch>
+      <Switch>
+        <Route path="/register_login" exact component={RegisterLogin}/>
+        <Route path="/" exact component={Home}/>
+      </Switch>
     </Layout>
-);
-    
+
+  )
+}
+
+
 export default Routes;
